@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Css</title>
+    <style>
+        body{
+         margin: 100px 100px;
+        }
+        .underDiv{
+            width: 250px;
+            height: 260px;
+            background-color: greenyellow;
+            position: relative;
+        }
+        .div{
+            width: 200px;
+            height: 100px;
+            position: absolute;
+            left:10% ;
+            bottom: 0px;
+            background-color: red;
+            animation: pluse 0.5s infinite ;
+        }
+        @keyframes pluse {
+            0%{
+                height: 100px;
+            }
+            100%{
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="underDiv">
+    <div class="div"></div>
+</div>
+</body>
+</html>
