@@ -1,94 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Loding Animation</title>
     <style>
-        body{
-            margin: 0;
-            padding: 0;
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: rgb(24, 23, 23);
+        display: grid;
+        justify-content: center;
+      }
+      .parent-div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 10rem;
+        height: 2rem;
+        margin: 4rem 5rem;
+        border-radius: 20px;
+        background-color: #7e7878;
+      }
+      .child {
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 100%;
+        margin-left: 6px;
+      }
+      #child1 {
+        background-color: #8bdb40;
+        animation: loader 1s infinite 0.1s;
+      }
+      #child2 {
+        background-color: #e6cd3d;
+        animation: loader 1s infinite 0.2s;
+      }
+      #child3 {
+        background-color: #4f40db;
+        animation: loader 1s infinite 0.3s;
+      }
+      #child4 {
+        background-color: #cb1996;
+        animation: loader 1s infinite 0.4s;
+      }
+      #child5 {
+        background-color: #11c1e4;
+        animation: loader 1s infinite 0.5s;
+      }
+
+      @keyframes loader {
+        0%,
+        100% {
+          transform: scale(0.3);
         }
-        .parent-div{
-            display: flex;
-            justify-content:first baseline;
-            align-items: center;
-            width: 10rem;
-            height: 2rem;
-            margin: 4rem 5rem;
-            border-radius: 20px ;
-            background-color: #7e7878;
-
+        25% {
+          transform: scale(0.6);
         }
-        .child1{
-            width: 1.5rem;
-            height: 1.5rem;
-            background-color: #8bdb40;
-            border-radius: 100%;
-            margin-left:5px ;
-            animation: loading1 0.4s infinite;
+        50% {
+          transform: scale(0.9);
         }
-        .child2{
-            width: 1.5rem;
-            height: 1.5rem;
-            background-color: #e6cd3d;
-            border-radius: 100%;
-            margin-left:5px ;
-            animation: loading1 0.6s infinite 0.1ms ;
-
-
-        }
-        .child3{
-            width: 1.5rem;
-            height: 1.5rem;
-            background-color: #4f40db;
-            border-radius: 100%;
-            margin-left:5px ;
-            animation: loading1 0.4s infinite 0.5s;
-
-
-        }
-        .child4{
-            width: 1.5rem;
-            height: 1.5rem;
-            background-color: #cb1996;
-            border-radius: 100%;
-            margin-left:5px ;
-            animation: loading1 0.6s infinite 0.5ms; 
-
-
-        }
-        .child5{
-            width: 1.5rem;
-            height: 1.5rem;
-            background-color: #11c1e4;
-            border-radius: 100%;
-            margin-left:5px ;
-            animation: loading1 0.4s infinite 0.1s ;
-
-        }
-
-        @keyframes loading1  {
-      
-            0%{
-                transform: scale(0.5);
-            }
-            100%{
-                transform: scale(1);
-            }
-        }
-        
-    
-      
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="parent-div">
-<div class="child1 "></div>
-<div class="child2 "></div>
-<div class="child3 "></div>
-<div class="child4 "></div>
-<div class="child5 "></div>
+      <div class="child" id="child1"></div>
+      <div class="child" id="child2"></div>
+      <div class="child" id="child3"></div>
+      <div class="child" id="child4"></div>
+      <div class="child" id="child5"></div>
     </div>
-</body>
+  </body>
 </html>
